@@ -1,0 +1,54 @@
+a.site-title {
+    display: none;
+}
+
+#user_tag::after {
+    display: none;
+}
+
+.lobby__feed, .lobby__tournaments-simuls, .lobby__support, .carousel__track {
+    display: none !important;
+}
+
+.tabs-horiz, .lobby__timeline, .lobby__streams {
+    display: none !important;
+}
+
+.lobby__counters {
+    translate: 0 -12%;
+}
+
+.lobby__app__content.lpools {
+    padding: 0;
+}
+
+.lobby__side {
+    margin: 0 !important;
+}
+
+.lobby__start {
+    justify-content: start !important;
+}
+
+.lobby {
+    grid-template-rows: unset !important;
+}
+
+.lobby__about {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    padding-bottom: 1em;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+html {
+    --m-accent--fade-80: hsla(208, 100%, 42%, 0.2) !important;
+    --c-accent: hsl(208 100% 42% / 1) !important;
+}

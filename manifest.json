@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Lichess Minimal CSS",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["*://*.lichess.org/*"],
+      "css": ["style.css"],
+      "js": ["content.js"]
+    }
+  ]
+}
