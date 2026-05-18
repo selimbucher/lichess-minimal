@@ -42,6 +42,34 @@ a.site-title {
     padding-bottom: 1em;
 }
 
+.lpool {
+    color: var(--c-font-clearer) !important;
+}
+
+.lpool .perf {
+    color: var(--c-font-dim);
+}
+
+.lpools {
+    background: none !important;
+}
+
+@media (min-width: 300px) {
+    .lpools {
+        font-size: calc(14px + 8 * (100vw - 300px) / 900) !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .lpools {
+        font-size: 22px !important;
+    }
+}
+
+body {
+    background: none !important;
+}
+
 html {
     display: flex;
     flex-direction: column;
