@@ -22,3 +22,5 @@ function append(parentQuery, nodeClass) {
 
 relocate('.lobby__tv', '.lobby__side')
 relocate('.lobby__puzzle', '.lobby__start')
+
+document.body.classList.add("loaded")

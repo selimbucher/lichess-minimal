@@ -1,0 +1,11 @@
+body:not(.loaded) .lobby__tv, body:not(.loaded) .lobby__puzzle {
+    display: none;
+}
+
+.lobby__side {
+    overflow: visible !important;
+}
+
+span.mini-game__player:last-child, .lobby__puzzle span.text:last-child {
+    margin-bottom: -1em;
+}
