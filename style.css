@@ -1,12 +1,4 @@
-a.site-title {
-    display: none;
-}
-
-#user_tag::after {
-    display: none;
-}
-
-.lobby__feed, .lobby__tournaments-simuls, .lobby__support, .carousel__track {
+.lobby__feed, .lobby__tournaments-simuls, .lobby__support, .lobby__blog {
     display: none !important;
 }
 
@@ -28,6 +20,7 @@ a.site-title {
 
 .lobby__start {
     justify-content: start !important;
+    margin: 0 !important;
 }
 
 .lobby {
@@ -35,6 +28,7 @@ a.site-title {
 }
 
 .lobby__about {
+    display: none !important;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -48,6 +42,10 @@ a.site-title {
 
 .lpool .perf {
     color: var(--c-font-dim);
+}
+
+.lpool .clock {
+    margin-inline-end: -0.1em;
 }
 
 .lpools {
@@ -67,7 +65,8 @@ a.site-title {
 }
 
 body {
-    background: none !important;
+    background: var(--c-bg-page) !important;
+    position: relative;
 }
 
 html {
@@ -79,4 +78,42 @@ html {
 html {
     --m-accent--fade-80: hsla(208, 100%, 42%, 0.2) !important;
     --c-accent: hsl(208 100% 42% / 1) !important;
+}
+
+.site-icon {
+    display: none !important;
+}
+
+#user_tag::after {
+    display: none;
+}
+
+#topnav {
+    position: absolute;
+    left: 50vw;
+    translate: -50% 0;
+}
+
+@media (min-width: 1259.3px) {
+    .lobby {
+        grid-template-areas:
+            "side app app table"
+        !important;
+    }
+}
+
+.connect-links {
+    font-family: "Font Awesome 7 Brands";
+}
+
+.lobby__spotlights {
+    box-shadow: none !important;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-spotlight {
+    box-shadow: none !important;
+    border-radius: 7px;
 }

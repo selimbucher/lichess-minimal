@@ -1,4 +1,9 @@
-console.log("relocating")
+/*
+const script = document.createElement('script');
+script.src = 'https://kit.fontawesome.com/682ebe0ed2.js';
+script.crossOrigin = 'anonymous';
+document.head.appendChild(script);
+*/
 
 function relocate(elementQuery, destinationQuery) {
   const el = document.querySelector(elementQuery);
