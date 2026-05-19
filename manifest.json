@@ -11,7 +11,8 @@
     {
       "run_at": "document_start",
       "matches": ["*://*.lichess.org/*"],
-      "css": ["loading.css"]
+      "css": ["loading.css"],
+      "js": ["loading.js"]
     }
   ]
 }

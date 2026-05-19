@@ -14,6 +14,10 @@
     padding: 0;
 }
 
+.lobby__app {
+    position: relative;
+}
+
 .lobby__side {
     margin: 0 !important;
 }
@@ -95,13 +99,31 @@ html {
     translate: -50% 0;
 }
 
+@media (min-width: 499.3px) {
+    .lobby {
+        grid-template-areas:
+            "app app"
+            "side table"
+            "ratings ratings"
+        !important;
+    }
+}
+
 @media (min-width: 1259.3px) {
     .lobby {
         grid-template-areas:
             "side app app table"
+            "ratings ratings ratings ratings"
         !important;
     }
 }
+
+@media (min-width: 799.3px) {
+    .lobby {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 
 .connect-links {
     font-family: "Font Awesome 7 Brands";
@@ -142,8 +164,11 @@ html.light .lpools::before {
     width: 105px;
     justify-content: start !important;
     gap: 4px;
-    margin-bottom: -2.8em;
-    margin-top: 0.5em;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: -1.5em;
+    z-index: 200;
 }
 
 .tabs-horiz button[role="tab"] {
@@ -196,6 +221,98 @@ html.light .lpools::before {
     display: none;
 }
 
-span.mini-game__player:last-child {
+span.mini-game__player:last-child, .lobby__puzzle span.text:last-child {
     margin-top: 0.1em;
+}
+
+.hooks__list td:last-child ::before {
+    color: var(--c-primary-clear) !important;
+}
+
+
+
+
+
+
+/* custom elements */
+
+.x__home_ratings {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    grid-area: ratings;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 12px 0;
+}
+
+.x__home_ratings .mode {
+    background: var(--c-bg-zebra);
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 7px;
+    padding: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    flex-shrink: 0;
+    transition: background-color 150ms ease;
+    transition-property: background-color color;
+    box-shadow: rgba(149, 157, 165, 0.06) 0px 4px 5px;
+}
+
+.x__home_ratings .mode:hover {
+    background: var(--c-bg-high);
+}
+
+html.dark .x__home_ratings .mode {
+    background: var(--c-bg-high);
+}
+
+html.dark .x__home_ratings .mode:hover {
+    background: var(--c-bg-zebra);
+}
+
+.x__home_ratings .icon {
+    font-family: "lichess";
+    font-size: 2em;
+    color: var(--c-font-clear);
+}
+
+.x__home_ratings .rating {
+    font-weight: bold;
+    color: var(--c-font-clearer);
+}
+
+@media (min-width: 300px) {
+    .x__home_ratings .mode {
+        font-size: calc(8px + 6 * (100vw - 300px) / 900);
+    }
+}
+
+@media (min-width: 1200px) {
+    .x__home_ratings .mode {
+        font-size: 14px;
+    }
+}
+
+.progress_container {
+    font-weight: normal;
+    font-size: 0.8em;
+    margin-left: 0.3em;
+}
+
+good.progress_container::before {
+    font-family: "lichess";
+    content: "";
+    margin-right: 0.1em;
+}
+
+bad.progress_container::before {
+    font-family: "lichess";
+    content: "";
+    margin-right: 0.1em;
 }
