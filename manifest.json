@@ -5,12 +5,16 @@
   "content_scripts": [
     {
       "matches": ["*://*.lichess.org/*"],
-      "css": ["style.css"],
+      "css": ["global.css"]
+    },
+    {
+      "matches": ["*://*.lichess.org/"],
+      "css": ["home.css"],
       "js": ["content.js"]
     },
     {
       "run_at": "document_start",
-      "matches": ["*://*.lichess.org/*"],
+      "matches": ["*://*.lichess.org/"],
       "css": ["loading.css"],
       "js": ["loading.js"]
     }

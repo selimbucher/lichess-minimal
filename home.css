@@ -69,36 +69,6 @@
     }
 }
 
-body {
-    background: var(--c-bg-page) !important;
-    position: relative;
-}
-
-html {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-html {
-    --m-accent--fade-80: hsla(208, 100%, 42%, 0.2) !important;
-    --c-accent: hsl(208 100% 42% / 1) !important;
-}
-
-.site-icon {
-    display: none !important;
-}
-
-#user_tag::after {
-    display: none;
-}
-
-#topnav {
-    position: absolute;
-    left: 50vw;
-    translate: -50% 0;
-}
-
 @media (min-width: 499.3px) {
     .lobby {
         grid-template-areas:
@@ -231,9 +201,6 @@ span.mini-game__player:last-child, .lobby__puzzle span.text:last-child {
 
 
 
-
-
-
 /* custom elements */
 
 .x__home_ratings {
@@ -243,15 +210,15 @@ span.mini-game__player:last-child, .lobby__puzzle span.text:last-child {
     grid-area: ratings;
     overflow-x: auto;
     scrollbar-width: none;
-    padding: 12px 0;
+    padding: 3px 0;
 }
 
 .x__home_ratings .mode {
     background: var(--c-bg-zebra);
-    color: inherit;
+    color: var(--c-font-clear);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     border-radius: 7px;
     padding: 8px;
     text-align: center;
@@ -279,7 +246,7 @@ html.dark .x__home_ratings .mode:hover {
 .x__home_ratings .icon {
     font-family: "lichess";
     font-size: 2em;
-    color: var(--c-font-clear);
+    color: var(--c-font-dim);
 }
 
 .x__home_ratings .rating {

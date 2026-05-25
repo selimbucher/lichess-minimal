@@ -1,0 +1,33 @@
+body {
+    background: var(--c-bg-page) !important;
+    position: relative;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+html {
+    --m-accent--fade-80: hsla(208, 100%, 42%, 0.2) !important;
+    --c-accent: hsl(208 100% 42% / 1) !important;
+}
+
+.site-icon {
+    display: none !important;
+}
+
+#user_tag::after {
+    display: none;
+}
+
+#topnav {
+    position: absolute;
+    left: 50vw;
+    translate: -50% 0;
+}
+
+square.last-move {
+    background-color: hsla(208, 100%, 50%, 0.41) !important;
+}
